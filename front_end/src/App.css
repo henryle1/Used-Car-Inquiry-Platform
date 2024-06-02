@@ -1,0 +1,368 @@
+/* App.css */
+:root {
+  --primary-color: #6c63ff;
+  --secondary-color: #ff6b6b;
+  --accent-color: #4ecdc4;
+  --background-color: #f4f4f4;
+  --text-color: #333333;
+  --light-text-color: #ffffff;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* LoginPage.css */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  position: relative;
+}
+
+.login-container,
+.signup-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 20px rgba(108, 99, 255, 0.2);
+  max-width: 400px;
+  width: 100%;
+  margin: 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  backdrop-filter: blur(10px);
+}
+
+h2 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  background-color: var(--secondary-color);
+  color: var(--light-text-color);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #ff8f8f;
+  transform: translateY(-2px);
+}
+
+.error-message {
+  color: var(--secondary-color);
+  margin-top: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.form-switch {
+  margin-top: 1rem;
+}
+
+.form-switch button {
+  background-color: transparent;
+  color: var(--primary-color);
+  text-decoration: underline;
+  padding: 0;
+  box-shadow: none;
+}
+
+.form-switch button:hover {
+  background-color: transparent;
+  color: #8c81ff;
+  transform: none;
+}
+
+/* CarSearch.css */
+.car-search {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.login-button {
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+.search-container {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.search-container input {
+  width: 60%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-container button {
+  margin-left: 1rem;
+}
+
+.my-list,
+.sample-cars {
+  margin-top: 2rem;
+}
+
+.car-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.car-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.car-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.favorite-cars-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.favorite-cars-header h3 {
+  margin: 0;
+}
+
+.favorite-cars-header button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.favorite-cars-header button:hover {
+  background-color: #ff3333;
+}
+
+/* Modal.css */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 20px rgba(108, 99, 255, 0.2);
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  animation: modal-appear 0.3s ease-out;
+}
+
+@keyframes modal-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: transparent;
+  color: var(--primary-color);
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.modal-close:hover {
+  color: #8c81ff;
+}
+
+/* RankedCars.css */
+.ranked-cars {
+  margin-top: 2rem;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ranked-cars h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.car-rank-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s;
+}
+
+.car-rank-item:last-child {
+  border-bottom: none;
+}
+
+.car-rank-item:hover {
+  background-color: var(--background-color);
+}
+
+.rank {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--secondary-color);
+  margin-right: 10px;
+}
+
+.car-name {
+  font-size: 18px;
+  font-weight: bold;
+  flex-grow: 1;
+}
+
+.total-sales {
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+
+.popular-cars-by-state {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h3 {
+  font-size: 24px;
+  color: #333;
+}
+
+.header button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.header button:hover {
+  background-color: #0056b3;
+}
+
+.popular-cars-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.popular-car-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.popular-car-item:hover {
+  transform: translateY(-5px);
+}
+
+.car-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.popularity-score {
+  font-size: 14px;
+  color: #666;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttons button:last-child {
+  background-color: #dc3545;
+}
+
+.buttons button:hover {
+  background-color: #0056b3;
+}
+
+.buttons button:last-child:hover {
+  background-color: #c82333;
+}
