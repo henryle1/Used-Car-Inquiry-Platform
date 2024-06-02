@@ -41,12 +41,3 @@ For a detailed UI mockup overview, visit [Figma](https://www.figma.com/file/Kfug
 
 ![img](System.jpg)In the first column is our sign in and registration part. Since we provide the functionality of creating a wish list, the registration function is necessary. The second column demonstrates our design for the search interface and the wish list part. There are filters for different attributes such as make, model, year, engine specifications, mileage, and price, which makes it easier for users to find their favorite cars. The third column contains our innovation point, the calculator for the tax and other fees based on the price of the car and the state users. This calculator is shown directly in the search interface, after the users click on each car, which brings great convenience and encourages the users to search through our system.
 
-## Project Work Distribution
-
-### Backend Area
-- **Xinming Zhai & Hanxuan Zhang**
-  - Responsibilities: Develop server-side logic, database management, and application integration.
-
-### Frontend Area
-- **Henry Li & Jingye Lin**
-  - Responsibilities: Design and develop the user interface and experience, ensure cross-platform compatibility, and implement front-end logic.
